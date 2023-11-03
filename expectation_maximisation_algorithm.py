@@ -113,7 +113,7 @@ def calculate_expectation(
     return weighted_binding_probs
 
 
-def maximize_expectation_corrected(
+def maximize_expectation(
     sequences: List[str],
     background: Dict[str, float],
     weighted_probs: List[List[float]],
@@ -180,7 +180,7 @@ def expectation_maximization_final(sequences: List[str], motif_length: int):
     while True:
         old_pfm = pfm.copy()
         weighted_probs = calculate_expectation(sequences, pfm, background, motif_length)
-        pfm, background = maximize_expectation_corrected(
+        pfm, background = maximize_expectation(
             sequences, background, weighted_probs, motif_length
         )
         if has_converged(old_pfm, pfm, motif_length):
