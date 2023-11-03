@@ -167,7 +167,7 @@ def has_converged(
     )
 
 
-def expectation_maximization_final(sequences: List[str], motif_length: int):
+def expectation_maximization(sequences: List[str], motif_length: int):
     """
     Run the Expectation-Maximization (EM) algorithm to find motifs within sequences.
 
@@ -192,4 +192,4 @@ def expectation_maximization_final(sequences: List[str], motif_length: int):
 sequences = ["".join(choice("ATGC") for _ in range(3000)) for _ in range(10)]
 
 # Running the corrected algorithm
-expectation_maximization_final(sequences, 45)
+expectation_maximization(sequences, 45)
