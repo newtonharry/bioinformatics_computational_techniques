@@ -1,0 +1,1 @@
+FilterMap<bio::io::fasta::Records<B>, fn(Result<bio::io::fasta::Record, std::io::Error>) -> Option<bio::io::fasta::Record> {Result::<bio::io::fasta::Record, std::io::Error>::ok}>

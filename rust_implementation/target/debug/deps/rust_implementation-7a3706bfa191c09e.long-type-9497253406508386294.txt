@@ -1,0 +1,1 @@
+FilterMap<bio::io::fasta::Records<BufReader<File>>, fn(Result<bio::io::fasta::Record, std::io::Error>) -> Result<Result<bio::io::fasta::Record, std::io::Error>, _> {Result::<Result<bio::io::fasta::Record, std::io::Error>, _>::Ok}>
